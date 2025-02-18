@@ -14,6 +14,7 @@ class UsersTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
+        // Genera gli utenti casuali per clienti e fornitori
         foreach (range(1, 20) as $index) {
             User::create([
                 'name' => $faker->name,

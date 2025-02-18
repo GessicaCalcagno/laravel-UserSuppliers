@@ -42,4 +42,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    // Controllo dei ruoli
+    public function isAdmin()
+    {
+        return $this->user_type === 'admin';
+    }
+
+    public function isClient()
+    {
+        return $this->user_type === 'cliente';
+    }
+
+    public function isProvider()
+    {
+        return $this->user_type === 'fornitore';
+    }
 }
