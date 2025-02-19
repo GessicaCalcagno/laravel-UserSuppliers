@@ -59,4 +59,11 @@ class User extends Authenticatable
     {
         return $this->user_type === 'fornitore';
     }
+
+    //Recensioni ricevute
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'provider_id');
+    }
+
 }
