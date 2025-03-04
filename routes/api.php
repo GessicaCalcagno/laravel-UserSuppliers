@@ -17,6 +17,18 @@ use App\Models\User;
 |
 */
 
+// Route::get('/prova', function () {
+//     return 'ok';
+// });
+
+// Route::middleware('auth:sanctum')->get('/prova-auth', function () {
+//     return 'auth ok';
+// });
+
+// Route::middleware(['auth:sanctum', 'ability:provider'])->get('/prova-auth-ability', function () {
+//     return 'provider ok';
+// });
+
 Route::get('/users', [UserController::class, 'index']);
 Route::post('/users', [UserController::class, 'store']);
 Route::put('/users/{id}', [UserController::class, 'update']);
